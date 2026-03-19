@@ -30,33 +30,21 @@
             min-height: 100vh;
         }
 
-        /* Header */
         .header {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
             color: white;
             padding: 28px 40px 24px;
             box-shadow: 0 4px 20px rgba(31,78,121,0.15);
         }
-        .header h1 {
-            font-size: 22px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            margin-bottom: 4px;
-        }
-        .header .subtitle {
-            font-size: 13px;
-            opacity: 0.75;
-            font-weight: 400;
-        }
+        .header h1 { font-size: 22px; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 4px; }
+        .header .subtitle { font-size: 13px; opacity: 0.75; font-weight: 400; }
 
-        /* Main content */
         .container {
             max-width: 1100px;
             margin: 0 auto;
             padding: 28px 24px 60px;
         }
 
-        /* Controls bar */
         .controls {
             display: flex;
             align-items: center;
@@ -64,11 +52,7 @@
             margin-bottom: 24px;
             flex-wrap: wrap;
         }
-        .controls label {
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--primary);
-        }
+        .controls label { font-size: 14px; font-weight: 600; color: var(--primary); }
         .controls select {
             padding: 10px 36px 10px 14px;
             font-size: 14px;
@@ -84,16 +68,11 @@
             background-position: right 12px center;
             min-width: 240px;
         }
-        .controls select:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(46,117,182,0.15);
-        }
+        .controls select:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(46,117,182,0.15); }
 
-        /* Stats cards */
         .stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 16px;
             margin-bottom: 28px;
         }
@@ -112,24 +91,17 @@
             margin-bottom: 6px;
             font-weight: 600;
         }
-        .stat-card .stat-value {
-            font-size: 26px;
-            font-weight: 700;
-            color: var(--primary);
-        }
+        .stat-card .stat-value { font-size: 26px; font-weight: 700; color: var(--primary); }
         .stat-card .stat-value.small { font-size: 20px; }
 
-        /* Table */
+        /* Desktop table */
         .table-wrapper {
             background: var(--card-bg);
             border-radius: 12px;
             box-shadow: var(--shadow);
             overflow: hidden;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
+        table { width: 100%; border-collapse: collapse; }
         thead th {
             background: var(--primary);
             color: white;
@@ -144,40 +116,17 @@
             z-index: 10;
         }
         thead th:nth-child(1) { width: 50px; text-align: center; }
-        thead th:nth-child(3),
-        thead th:nth-child(4),
-        thead th:nth-child(5) { text-align: right; }
-
-        tbody tr {
-            border-bottom: 1px solid var(--border);
-            transition: background 0.15s;
-        }
+        thead th:nth-child(3), thead th:nth-child(4), thead th:nth-child(5) { text-align: right; }
+        tbody tr { border-bottom: 1px solid var(--border); transition: background 0.15s; }
         tbody tr:hover { background: var(--primary-lighter); }
         tbody tr:nth-child(even) { background: #FAFBFC; }
         tbody tr:nth-child(even):hover { background: var(--primary-lighter); }
-
-        td {
-            padding: 14px 16px;
-            font-size: 14px;
-        }
-        td:nth-child(1) {
-            text-align: center;
-            color: var(--text-light);
-            font-weight: 500;
-            font-size: 13px;
-        }
+        td { padding: 14px 16px; font-size: 14px; }
+        td:nth-child(1) { text-align: center; color: var(--text-light); font-weight: 500; font-size: 13px; }
         td:nth-child(2) { font-weight: 600; }
-        td:nth-child(3),
-        td:nth-child(4),
-        td:nth-child(5) { text-align: right; font-variant-numeric: tabular-nums; }
+        td:nth-child(3), td:nth-child(4), td:nth-child(5) { text-align: right; font-variant-numeric: tabular-nums; }
 
-        /* Jackpot amount with bar */
-        .jackpot-cell {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            gap: 10px;
-        }
+        .jackpot-cell { display: flex; align-items: center; justify-content: flex-end; gap: 10px; }
         .jackpot-bar {
             height: 8px;
             border-radius: 4px;
@@ -186,54 +135,80 @@
             min-width: 4px;
             transition: width 0.4s ease;
         }
-        .jackpot-amount {
-            font-weight: 700;
-            color: var(--primary);
-            font-size: 15px;
-            white-space: nowrap;
-        }
+        .jackpot-amount { font-weight: 700; color: var(--primary); font-size: 15px; white-space: nowrap; }
 
-        /* Change indicators */
         .change-positive {
-            color: var(--green);
-            font-weight: 600;
-            background: var(--green-bg);
-            padding: 3px 10px;
-            border-radius: 20px;
-            font-size: 13px;
-            display: inline-block;
+            color: var(--green); font-weight: 600; background: var(--green-bg);
+            padding: 3px 10px; border-radius: 20px; font-size: 13px; display: inline-block;
         }
         .change-negative {
-            color: var(--red);
-            font-weight: 600;
-            background: var(--red-bg);
-            padding: 3px 10px;
-            border-radius: 20px;
-            font-size: 13px;
-            display: inline-block;
+            color: var(--red); font-weight: 600; background: var(--red-bg);
+            padding: 3px 10px; border-radius: 20px; font-size: 13px; display: inline-block;
         }
-        .change-neutral {
-            color: var(--text-light);
-            font-size: 13px;
-        }
+        .change-neutral { color: var(--text-light); font-size: 13px; }
 
-        /* Footer */
-        .footer {
-            text-align: center;
-            padding: 20px;
-            color: var(--text-light);
-            font-size: 12px;
+        .footer { text-align: center; padding: 20px; color: var(--text-light); font-size: 12px; }
+
+        /* Mobile cards - hidden on desktop */
+        .mobile-cards { display: none; }
+
+        .m-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 16px;
+            margin-bottom: 10px;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 14px;
         }
+        .m-rank {
+            width: 32px;
+            height: 32px;
+            background: var(--primary-lighter);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 13px;
+            flex-shrink: 0;
+        }
+        .m-info { flex: 1; min-width: 0; }
+        .m-name { font-weight: 600; font-size: 14px; margin-bottom: 4px; }
+        .m-bar-wrapper { height: 6px; background: #EEF2F7; border-radius: 3px; margin-bottom: 6px; }
+        .m-bar {
+            height: 100%;
+            border-radius: 3px;
+            background: linear-gradient(90deg, var(--primary-lighter), var(--primary-light));
+            transition: width 0.4s ease;
+        }
+        .m-bottom { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+        .m-amount { font-weight: 700; color: var(--primary); font-size: 16px; white-space: nowrap; }
+        .m-change { font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 12px; white-space: nowrap; }
+        .m-change.pos { color: var(--green); background: var(--green-bg); }
+        .m-change.neg { color: var(--red); background: var(--red-bg); }
+        .m-change.neutral { color: var(--text-light); }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .header { padding: 20px; }
-            .header h1 { font-size: 18px; }
-            .container { padding: 16px 12px; }
-            .controls select { min-width: 100%; }
-            .stats { grid-template-columns: 1fr 1fr; }
-            td { padding: 10px 8px; font-size: 13px; }
-            .jackpot-bar { display: none; }
+            .header { padding: 20px 16px 16px; }
+            .header h1 { font-size: 16px; }
+            .header .subtitle { font-size: 11px; }
+            .container { padding: 16px 12px 40px; }
+            .controls { gap: 10px; }
+            .controls select { min-width: 100%; flex: 1; }
+            .controls label { font-size: 13px; }
+            .stats { grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+            .stat-card { padding: 14px 14px; }
+            .stat-card .stat-value { font-size: 22px; }
+            .stat-card .stat-value.small { font-size: 17px; }
+            .stat-card .stat-label { font-size: 10px; }
+
+            /* Hide table, show cards */
+            .table-wrapper { display: none; }
+            .mobile-cards { display: block; }
         }
     </style>
 </head>
@@ -253,7 +228,7 @@
 
     <div class="stats">
         <div class="stat-card">
-            <div class="stat-label">Število jackpotov</div>
+            <div class="stat-label">Jackpotov</div>
             <div class="stat-value" id="stat-count">—</div>
         </div>
         <div class="stat-card">
@@ -261,15 +236,16 @@
             <div class="stat-value small" id="stat-total">—</div>
         </div>
         <div class="stat-card">
-            <div class="stat-label">Največji jackpot</div>
+            <div class="stat-label">Največji</div>
             <div class="stat-value small" id="stat-max">—</div>
         </div>
         <div class="stat-card">
-            <div class="stat-label">Povprečna vrednost</div>
+            <div class="stat-label">Povprečje</div>
             <div class="stat-value small" id="stat-avg">—</div>
         </div>
     </div>
 
+    <!-- Desktop: table -->
     <div class="table-wrapper">
         <table>
             <thead>
@@ -285,15 +261,15 @@
         </table>
     </div>
 
+    <!-- Mobile: cards -->
+    <div class="mobile-cards" id="mobile-cards"></div>
+
     <div class="footer">
-        <div>Vir podatkov: casinoji.si — Zadnja posodobitev: <span id="footer-date"></span></div>
+        Vir: casinoji.si — Posodobljeno: <span id="footer-date"></span>
     </div>
 </div>
 
 <script>
-// ============================================================
-// DATA — This section gets replaced by the automation script
-// ============================================================
 const JACKPOT_DATA = {
     "last_update": "19.03.2026 09:00",
     "casinos": {
@@ -369,74 +345,70 @@ const JACKPOT_DATA = {
     }
 };
 
-// ============================================================
-// APP LOGIC
-// ============================================================
 const fmt = (n) => n.toLocaleString('sl-SI') + ' \u20AC';
 const fmtChange = (n) => (n > 0 ? '+' : '') + n.toLocaleString('sl-SI') + ' \u20AC';
 const fmtPct = (n) => (n > 0 ? '+' : '') + (n * 100).toFixed(1) + '%';
 
 function init() {
     const select = document.getElementById('casino-select');
-    const names = Object.keys(JACKPOT_DATA.casinos);
-    names.forEach(name => {
+    Object.keys(JACKPOT_DATA.casinos).forEach(name => {
         const opt = document.createElement('option');
-        opt.value = name;
-        opt.textContent = name;
+        opt.value = name; opt.textContent = name;
         select.appendChild(opt);
     });
     select.addEventListener('change', () => render(select.value));
-
     document.getElementById('update-date').textContent = 'Posodobljeno: ' + JACKPOT_DATA.last_update;
     document.getElementById('footer-date').textContent = JACKPOT_DATA.last_update;
-
-    render(names[0]);
+    render(Object.keys(JACKPOT_DATA.casinos)[0]);
 }
 
 function render(casinoName) {
-    const games = JACKPOT_DATA.casinos[casinoName]
-        .slice()
-        .sort((a, b) => b.amount - a.amount);
-
+    const games = JACKPOT_DATA.casinos[casinoName].slice().sort((a, b) => b.amount - a.amount);
     const total = games.reduce((s, g) => s + g.amount, 0);
     const maxAmt = games[0].amount;
-    const avg = Math.round(total / games.length);
 
     document.getElementById('stat-count').textContent = games.length;
     document.getElementById('stat-total').textContent = fmt(total);
     document.getElementById('stat-max').textContent = fmt(maxAmt);
-    document.getElementById('stat-avg').textContent = fmt(avg);
+    document.getElementById('stat-avg').textContent = fmt(Math.round(total / games.length));
 
+    // Desktop table
     const tbody = document.getElementById('table-body');
     tbody.innerHTML = '';
-
     games.forEach((g, i) => {
         const tr = document.createElement('tr');
-        const barWidth = Math.max(4, Math.round((g.amount / maxAmt) * 120));
-
-        let changeHtml, pctHtml;
-        if (g.change > 0) {
-            changeHtml = '<span class="change-positive">' + fmtChange(g.change) + '</span>';
-            pctHtml = '<span class="change-positive">' + fmtPct(g.pct) + '</span>';
-        } else if (g.change < 0) {
-            changeHtml = '<span class="change-negative">' + fmtChange(g.change) + '</span>';
-            pctHtml = '<span class="change-negative">' + fmtPct(g.pct) + '</span>';
-        } else {
-            changeHtml = '<span class="change-neutral">\u2014</span>';
-            pctHtml = '<span class="change-neutral">\u2014</span>';
-        }
-
-        tr.innerHTML =
-            '<td>' + (i + 1) + '</td>' +
-            '<td>' + g.game + '</td>' +
-            '<td><div class="jackpot-cell">' +
-                '<div class="jackpot-bar" style="width:' + barWidth + 'px"></div>' +
-                '<span class="jackpot-amount">' + fmt(g.amount) + '</span>' +
-            '</div></td>' +
-            '<td>' + changeHtml + '</td>' +
-            '<td>' + pctHtml + '</td>';
-
+        const barW = Math.max(4, Math.round((g.amount / maxAmt) * 120));
+        let ch, pc;
+        if (g.change > 0) { ch = '<span class="change-positive">' + fmtChange(g.change) + '</span>'; pc = '<span class="change-positive">' + fmtPct(g.pct) + '</span>'; }
+        else if (g.change < 0) { ch = '<span class="change-negative">' + fmtChange(g.change) + '</span>'; pc = '<span class="change-negative">' + fmtPct(g.pct) + '</span>'; }
+        else { ch = '<span class="change-neutral">\u2014</span>'; pc = '<span class="change-neutral">\u2014</span>'; }
+        tr.innerHTML = '<td>' + (i+1) + '</td><td>' + g.game + '</td><td><div class="jackpot-cell"><div class="jackpot-bar" style="width:' + barW + 'px"></div><span class="jackpot-amount">' + fmt(g.amount) + '</span></div></td><td>' + ch + '</td><td>' + pc + '</td>';
         tbody.appendChild(tr);
+    });
+
+    // Mobile cards
+    const cards = document.getElementById('mobile-cards');
+    cards.innerHTML = '';
+    games.forEach((g, i) => {
+        const barPct = Math.max(3, Math.round((g.amount / maxAmt) * 100));
+        let changeHtml;
+        if (g.change > 0) changeHtml = '<span class="m-change pos">' + fmtChange(g.change) + '</span>';
+        else if (g.change < 0) changeHtml = '<span class="m-change neg">' + fmtChange(g.change) + '</span>';
+        else changeHtml = '<span class="m-change neutral">\u2014</span>';
+
+        const card = document.createElement('div');
+        card.className = 'm-card';
+        card.innerHTML =
+            '<div class="m-rank">' + (i+1) + '</div>' +
+            '<div class="m-info">' +
+                '<div class="m-name">' + g.game + '</div>' +
+                '<div class="m-bar-wrapper"><div class="m-bar" style="width:' + barPct + '%"></div></div>' +
+                '<div class="m-bottom">' +
+                    '<span class="m-amount">' + fmt(g.amount) + '</span>' +
+                    changeHtml +
+                '</div>' +
+            '</div>';
+        cards.appendChild(card);
     });
 }
 
