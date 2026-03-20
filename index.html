@@ -186,6 +186,7 @@
         }
         .m-bottom { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
         .m-amount { font-weight: 700; color: var(--primary); font-size: 16px; white-space: nowrap; }
+        .m-changes { display: flex; gap: 6px; align-items: center; flex-shrink: 0; }
         .m-change { font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 12px; white-space: nowrap; }
         .m-change.pos { color: var(--green); background: var(--green-bg); }
         .m-change.neg { color: var(--red); background: var(--red-bg); }
@@ -392,8 +393,8 @@ function render(casinoName) {
     games.forEach((g, i) => {
         const barPct = Math.max(3, Math.round((g.amount / maxAmt) * 100));
         let changeHtml;
-        if (g.change > 0) changeHtml = '<span class="m-change pos">' + fmtChange(g.change) + '</span>';
-        else if (g.change < 0) changeHtml = '<span class="m-change neg">' + fmtChange(g.change) + '</span>';
+        if (g.change > 0) changeHtml = '<div class="m-changes"><span class="m-change pos">' + fmtChange(g.change) + '</span><span class="m-change pos">' + fmtPct(g.pct) + '</span></div>';
+        else if (g.change < 0) changeHtml = '<div class="m-changes"><span class="m-change neg">' + fmtChange(g.change) + '</span><span class="m-change neg">' + fmtPct(g.pct) + '</span></div>';
         else changeHtml = '<span class="m-change neutral">\u2014</span>';
 
         const card = document.createElement('div');
