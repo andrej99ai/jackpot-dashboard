@@ -241,7 +241,6 @@
             <div class="stat-value small" id="stat-max">—</div>
         </div>
         <div class="stat-card">
-            <div class="stat-label">Povprečje</div>
             <div class="stat-value small" id="stat-avg">—</div>
         </div>
     </div>
@@ -272,76 +271,381 @@
 
 <script>
 const JACKPOT_DATA = {
-    "last_update": "19.03.2026 09:00",
+    "last_update": "24.03.2026 11:17",
     "casinos": {
         "Grand Casino Emona": [
-            {"game": "Bell Link", "amount": 11307, "change": 0, "pct": 0},
-            {"game": "Impera Link 2", "amount": 10245, "change": 0, "pct": 0},
-            {"game": "Magic Treasures", "amount": 10181, "change": 0, "pct": 0},
-            {"game": "Money Gong", "amount": 10066, "change": 0, "pct": 0},
-            {"game": "Mystery of the Lamp", "amount": 11591, "change": 0, "pct": 0},
-            {"game": "Pro Link", "amount": 10289, "change": 0, "pct": 0},
-            {"game": "Superia Games Link 1", "amount": 10252, "change": 0, "pct": 0},
-            {"game": "Tiger and Dragon", "amount": 10293, "change": 0, "pct": 0},
-            {"game": "Xtension Link", "amount": 10345, "change": 0, "pct": 0}
+            {
+                "game": "Bell Link",
+                "amount": 10030,
+                "change": -1277,
+                "pct": -0.1129
+            },
+            {
+                "game": "Impera Link 2",
+                "amount": 10375,
+                "change": 130,
+                "pct": 0.0127
+            },
+            {
+                "game": "Magic Treasures",
+                "amount": 10230,
+                "change": 49,
+                "pct": 0.0048
+            },
+            {
+                "game": "Money Gong",
+                "amount": 12403,
+                "change": 2337,
+                "pct": 0.2322
+            },
+            {
+                "game": "Mystery of the Lamp",
+                "amount": 11936,
+                "change": 345,
+                "pct": 0.0298
+            },
+            {
+                "game": "Pro Link",
+                "amount": 10307,
+                "change": 18,
+                "pct": 0.0017
+            },
+            {
+                "game": "Superia Games Link 1",
+                "amount": 10272,
+                "change": 20,
+                "pct": 0.002
+            },
+            {
+                "game": "Tiger and Dragon",
+                "amount": 10326,
+                "change": 33,
+                "pct": 0.0032
+            },
+            {
+                "game": "Xtension Link",
+                "amount": 10496,
+                "change": 151,
+                "pct": 0.0146
+            }
         ],
         "Grand Casino Mons": [
-            {"game": "Bell Link", "amount": 11706, "change": 0, "pct": 0},
-            {"game": "Xtension Link", "amount": 11249, "change": 0, "pct": 0},
-            {"game": "Golden Link", "amount": 13058, "change": 0, "pct": 0},
-            {"game": "Clover Link Elements", "amount": 22870, "change": 0, "pct": 0},
-            {"game": "Cash Connection", "amount": 10088, "change": 0, "pct": 0},
-            {"game": "Impera Link 2", "amount": 10554, "change": 0, "pct": 0},
-            {"game": "Bingo", "amount": 50000, "change": 0, "pct": 0},
-            {"game": "All Aboard", "amount": 10209, "change": 0, "pct": 0},
-            {"game": "Tiger and Dragon", "amount": 10308, "change": 0, "pct": 0},
-            {"game": "Egyptian Link", "amount": 13342, "change": 0, "pct": 0},
-            {"game": "Mystery of Lamp", "amount": 13987, "change": 0, "pct": 0},
-            {"game": "Dragons' Law", "amount": 9153, "change": 0, "pct": 0},
-            {"game": "Magic Treasures", "amount": 11778, "change": 0, "pct": 0},
-            {"game": "Sheng Sheng Bu Xi", "amount": 11227, "change": 0, "pct": 0},
-            {"game": "Mystery of the Lamp Open Air", "amount": 16229, "change": 0, "pct": 0},
-            {"game": "Money Gong", "amount": 12900, "change": 0, "pct": 0},
-            {"game": "River Gold", "amount": 10001, "change": 0, "pct": 0},
-            {"game": "Haunted Fortune", "amount": 10001, "change": 0, "pct": 0}
+            {
+                "game": "Bell Link",
+                "amount": 12396,
+                "change": 690,
+                "pct": 0.0589
+            },
+            {
+                "game": "Xtension Link",
+                "amount": 10424,
+                "change": -825,
+                "pct": -0.0733
+            },
+            {
+                "game": "Golden Link",
+                "amount": 13125,
+                "change": 67,
+                "pct": 0.0051
+            },
+            {
+                "game": "Clover Link Elements",
+                "amount": 23225,
+                "change": 355,
+                "pct": 0.0155
+            },
+            {
+                "game": "Cash Connection",
+                "amount": 10148,
+                "change": 60,
+                "pct": 0.0059
+            },
+            {
+                "game": "Impera Link 2",
+                "amount": 10842,
+                "change": 288,
+                "pct": 0.0273
+            },
+            {
+                "game": "Bingo",
+                "amount": 50000,
+                "change": 0,
+                "pct": 0.0
+            },
+            {
+                "game": "All Aboard",
+                "amount": 10220,
+                "change": 11,
+                "pct": 0.0011
+            },
+            {
+                "game": "Tiger and Dragon",
+                "amount": 10358,
+                "change": 50,
+                "pct": 0.0049
+            },
+            {
+                "game": "Egyptian Link",
+                "amount": 13683,
+                "change": 341,
+                "pct": 0.0256
+            },
+            {
+                "game": "Mystery of Lamp",
+                "amount": 14576,
+                "change": 589,
+                "pct": 0.0421
+            },
+            {
+                "game": "Dragons' Law",
+                "amount": 9163,
+                "change": 10,
+                "pct": 0.0011
+            },
+            {
+                "game": "Magic Treasures",
+                "amount": 11868,
+                "change": 90,
+                "pct": 0.0076
+            },
+            {
+                "game": "Sheng Sheng Bu Xi",
+                "amount": 11697,
+                "change": 470,
+                "pct": 0.0419
+            },
+            {
+                "game": "Mystery of the Lamp Open Air",
+                "amount": 16960,
+                "change": 731,
+                "pct": 0.045
+            },
+            {
+                "game": "Money Gong",
+                "amount": 13669,
+                "change": 769,
+                "pct": 0.0596
+            },
+            {
+                "game": "River Gold",
+                "amount": 10072,
+                "change": 71,
+                "pct": 0.0071
+            },
+            {
+                "game": "Haunted Fortune",
+                "amount": 10072,
+                "change": 71,
+                "pct": 0.0071
+            }
         ],
         "Casino Lipica": [
-            {"game": "Clover Link Elements", "amount": 20898, "change": 0, "pct": 0},
-            {"game": "Impera Link 2", "amount": 10752, "change": 0, "pct": 0},
-            {"game": "Bell Link Open Air", "amount": 10294, "change": 0, "pct": 0},
-            {"game": "Cash Connection", "amount": 10717, "change": 0, "pct": 0},
-            {"game": "Golden Link", "amount": 11400, "change": 0, "pct": 0},
-            {"game": "Triple Fortune Link", "amount": 10982, "change": 0, "pct": 0},
-            {"game": "Bell Link Indoor", "amount": 10896, "change": 0, "pct": 0},
-            {"game": "Rising Rockets", "amount": 12341, "change": 0, "pct": 0},
-            {"game": "Sheng Sheng Bu Xi", "amount": 16323, "change": 0, "pct": 0},
-            {"game": "Samurai Spin Sakura & Kenji", "amount": 12428, "change": 0, "pct": 0}
+            {
+                "game": "Clover Link Elements",
+                "amount": 21487,
+                "change": 589,
+                "pct": 0.0282
+            },
+            {
+                "game": "Impera Link 2",
+                "amount": 10982,
+                "change": 230,
+                "pct": 0.0214
+            },
+            {
+                "game": "Bell Link 1 Bell Link 2 Open Air",
+                "amount": 10858,
+                "change": 0,
+                "pct": 0.0
+            },
+            {
+                "game": "Cash Connection",
+                "amount": 10950,
+                "change": 233,
+                "pct": 0.0217
+            },
+            {
+                "game": "Golden Link",
+                "amount": 11456,
+                "change": 56,
+                "pct": 0.0049
+            },
+            {
+                "game": "Triple Fortune Link",
+                "amount": 11104,
+                "change": 122,
+                "pct": 0.0111
+            },
+            {
+                "game": "Bell Link 1 Bell Link 2 Indoor",
+                "amount": 11395,
+                "change": 0,
+                "pct": 0.0
+            },
+            {
+                "game": "Rising Rockets",
+                "amount": 12404,
+                "change": 63,
+                "pct": 0.0051
+            },
+            {
+                "game": "Sheng Sheng Bu Xi",
+                "amount": 10011,
+                "change": -6312,
+                "pct": -0.3867
+            },
+            {
+                "game": "Samurai Spin Sakura & Kenji",
+                "amount": 12532,
+                "change": 104,
+                "pct": 0.0084
+            }
         ],
         "Grand Casino Portoroz": [
-            {"game": "Bingo", "amount": 50000, "change": 0, "pct": 0},
-            {"game": "Caribbean Poker", "amount": 62713, "change": 0, "pct": 0},
-            {"game": "Ultra Hot Mega Link", "amount": 10703, "change": 0, "pct": 0},
-            {"game": "Player's Choice (1)", "amount": 9188, "change": 0, "pct": 0},
-            {"game": "Power of Riches", "amount": 114662, "change": 0, "pct": 0},
-            {"game": "Wealth of Dynasty", "amount": 10111, "change": 0, "pct": 0},
-            {"game": "Impera Link Series 2", "amount": 12609, "change": 0, "pct": 0},
-            {"game": "Eternal Lotus", "amount": 10702, "change": 0, "pct": 0},
-            {"game": "Ultimate Fire Link", "amount": 11425, "change": 0, "pct": 0},
-            {"game": "Player's Choice (2)", "amount": 8897, "change": 0, "pct": 0},
-            {"game": "Rising Rocket", "amount": 10038, "change": 0, "pct": 0},
-            {"game": "Magic Treasures", "amount": 10292, "change": 0, "pct": 0},
-            {"game": "Gettin' Piggy With It", "amount": 8659, "change": 0, "pct": 0},
-            {"game": "Yo Ho Hog", "amount": 8753, "change": 0, "pct": 0},
-            {"game": "Samurai 888 Spin", "amount": 9345, "change": 0, "pct": 0},
-            {"game": "888 Takeo (1)", "amount": 13067, "change": 0, "pct": 0},
-            {"game": "888 Takeo (2)", "amount": 11125, "change": 0, "pct": 0},
-            {"game": "888 Katsumi", "amount": 9414, "change": 0, "pct": 0},
-            {"game": "Jinse Dao", "amount": 15236, "change": 0, "pct": 0},
-            {"game": "Money Link", "amount": 12176, "change": 0, "pct": 0},
-            {"game": "Egyptian Dreams", "amount": 10088, "change": 0, "pct": 0},
-            {"game": "Egyptian Stars", "amount": 10096, "change": 0, "pct": 0},
-            {"game": "Regal Link", "amount": 11407, "change": 0, "pct": 0},
-            {"game": "Egyptian Dream", "amount": 10122, "change": 0, "pct": 0}
+            {
+                "game": "Bingo",
+                "amount": 50000,
+                "change": 0,
+                "pct": 0.0
+            },
+            {
+                "game": "Caribbean Poker",
+                "amount": 62713,
+                "change": 0,
+                "pct": 0.0
+            },
+            {
+                "game": "Ultra Hot Mega Link",
+                "amount": 10809,
+                "change": 106,
+                "pct": 0.0099
+            },
+            {
+                "game": "Player's Choice",
+                "amount": 9194,
+                "change": 0,
+                "pct": 0.0
+            },
+            {
+                "game": "Power of Riches",
+                "amount": 11481,
+                "change": -103181,
+                "pct": -0.8999
+            },
+            {
+                "game": "Wealth of Dynasty",
+                "amount": 10138,
+                "change": 27,
+                "pct": 0.0027
+            },
+            {
+                "game": "Impera Link Series 2",
+                "amount": 13098,
+                "change": 489,
+                "pct": 0.0388
+            },
+            {
+                "game": "Eternal Lotus",
+                "amount": 10841,
+                "change": 139,
+                "pct": 0.013
+            },
+            {
+                "game": "Ultimate Fire Link",
+                "amount": 11428,
+                "change": 3,
+                "pct": 0.0003
+            },
+            {
+                "game": "Player's Choice",
+                "amount": 8898,
+                "change": 0,
+                "pct": 0.0
+            },
+            {
+                "game": "Rising Rocket",
+                "amount": 10490,
+                "change": 452,
+                "pct": 0.045
+            },
+            {
+                "game": "Magic Treasures",
+                "amount": 10389,
+                "change": 97,
+                "pct": 0.0094
+            },
+            {
+                "game": "Gettin' Piggy With It",
+                "amount": 8758,
+                "change": 99,
+                "pct": 0.0114
+            },
+            {
+                "game": "Yo Ho Hog",
+                "amount": 8809,
+                "change": 56,
+                "pct": 0.0064
+            },
+            {
+                "game": "Samurai 888 Spin",
+                "amount": 9471,
+                "change": 126,
+                "pct": 0.0135
+            },
+            {
+                "game": "888 Takeo",
+                "amount": 13248,
+                "change": 0,
+                "pct": 0.0
+            },
+            {
+                "game": "888 Takeo",
+                "amount": 11214,
+                "change": 0,
+                "pct": 0.0
+            },
+            {
+                "game": "888 Katsumi",
+                "amount": 9510,
+                "change": 96,
+                "pct": 0.0102
+            },
+            {
+                "game": "Jinse Dao",
+                "amount": 15265,
+                "change": 29,
+                "pct": 0.0019
+            },
+            {
+                "game": "Money Link",
+                "amount": 12207,
+                "change": 31,
+                "pct": 0.0025
+            },
+            {
+                "game": "Egyptian Dreams",
+                "amount": 10089,
+                "change": 1,
+                "pct": 0.0001
+            },
+            {
+                "game": "Egyptian Stars",
+                "amount": 10002,
+                "change": -94,
+                "pct": -0.0093
+            },
+            {
+                "game": "Regal Link",
+                "amount": 11768,
+                "change": 361,
+                "pct": 0.0316
+            },
+            {
+                "game": "Egytian Dream",
+                "amount": 10123,
+                "change": 0,
+                "pct": 0.0
+            }
         ]
     }
 };
